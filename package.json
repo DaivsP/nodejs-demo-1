@@ -1,0 +1,24 @@
+{
+  "name": "nodejs_demo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "ts-node": "^10.7.0",
+    "pug": "^3.0.2",
+    "ejs": "^3.1.6",
+    "express-handlebars": "^6.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

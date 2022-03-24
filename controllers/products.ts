@@ -1,4 +1,5 @@
 import {Request, Response} from 'express';
+
 const Product = require('../models/product');
 
 exports.getAddProduct = (req: Request, res: Response) => {
@@ -12,8 +13,9 @@ exports.postAddProduct = (req: Request, res: Response) => {
 };
 
 exports.getProducts = (req: Request, res: Response) => {
-  const products = Product.fetchAll();
-  res.render('shop', {prods: products, pageTitle: 'Shop', path: '/'});
-  // console.log('shop.js', adminData.products);
-  // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
-}
+  Product.fetchAll((products: any) => {
+    res.render('shop', {prods: products, pageTitle: 'Shop', path: '/'});
+    // console.log('shop.js', adminData.products);
+    // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
+  });
+};
